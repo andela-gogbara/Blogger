@@ -1,0 +1,8 @@
+<h1>Vendors And Their Suyas</h1>
+<div class="vendors">
+  <% @vendors.each do |vendor| %>
+      <div class="vendor"> <%= link_to vendor.name, vendor_path(vendor), class: "vendor_name", id: "vendor_#{vendor.id}" %></div>
+  <% end %>
+</div>
+
+<%= link_to "Create new Vendor", new_vendor_path, class: "new_vendor" %>
